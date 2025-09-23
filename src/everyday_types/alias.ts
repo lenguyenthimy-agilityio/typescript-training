@@ -30,7 +30,7 @@ type Admin = {
 type AdminUser = User & Admin;
 
 const admin: AdminUser = {
-  id: "admin1",
+  id: 1,
   name: "Bob",
   role: "superadmin",
 };

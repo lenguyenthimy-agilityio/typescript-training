@@ -5,7 +5,7 @@ function setState(s: State) {
 }
 
 let currentStatus = "active"; // inferred as string
-setState(currentStatus); // ❌ error: string not assignable to "active" | "inactive"
+// setState(currentStatus); // ❌ error: string not assignable to "active" | "inactive"
 
 // To fix this, we can use a type assertion
 setState(currentStatus as State); // ✅ works
