@@ -22,11 +22,11 @@ type StringToBooleanFuncAndConstructor = {
 };
 
 // Generic example with a function
-function identity<T>(arg: T): T {
+function identity1<T>(arg: T): T {
   return arg;
 }
 
-const str_hello = identity<string>("hello");
+const str_hello = identity1<string>("hello");
 console.log(str_hello); // "hello"
 
 
@@ -35,10 +35,10 @@ interface Lengthwise {
   length: number;
 }
 
-function loggingIdentity<T extends Lengthwise>(arg: T): T {
+function loggingIdentity1<T extends Lengthwise>(arg: T): T {
   console.log(arg.length); // Now we know it has a .length property, so no error
   return arg;
 }
 
-const arr_len = loggingIdentity([1, 2, 3]); // OK
+const arr_len = loggingIdentity1([1, 2, 3]); // OK
 console.log(arr_len); // [1, 2, 3]
